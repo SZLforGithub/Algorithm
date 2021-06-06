@@ -5,7 +5,7 @@ func Handler(arr []int) []int {
 	length := len(arr)
 
 	for i := 0; i < length; i++ {
-		smallestIndex := findSmall(arr)
+		smallestIndex := findSmallest(arr)
 		newArr = append(newArr, arr[smallestIndex])
 		arr = remove(arr, smallestIndex)
 	}
