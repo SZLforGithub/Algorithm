@@ -13,7 +13,7 @@ func Handler(arr []int) []int {
 	return newArr
 }
 
-func findSmall(arr []int) int {
+func findSmallest(arr []int) int {
 	smallestIndex := 0
 	smallest := arr[smallestIndex]
 
