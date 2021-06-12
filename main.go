@@ -4,12 +4,12 @@ import (
 	"fmt"
 
 	binSearch "github.com/SZLforGithub/Algorithm/binarysearch"
-	sum "github.com/SZLforGithub/Algorithm/recursionsum"
+	recursion "github.com/SZLforGithub/Algorithm/recursion"
 	selectSearch "github.com/SZLforGithub/Algorithm/selectionsearch"
 )
 
 func main() {
-	showRecursionSum()
+	showRecursionMax()
 }
 
 func showBinSearch() {
@@ -25,5 +25,15 @@ func showSelectSearch() {
 
 func showRecursionSum() {
 	myList := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	fmt.Println(sum.Handler(myList))
+	fmt.Println(recursion.Sum(myList))
+}
+
+func showRecursionCount() {
+	myList := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	fmt.Println(recursion.Count(myList))
+}
+
+func showRecursionMax() {
+	myList := []int{1, 2, 3, 4, 5, 11, 6, 7, 8, 9, 10}
+	fmt.Println(recursion.Max(myList))
 }
