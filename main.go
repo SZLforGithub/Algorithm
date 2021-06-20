@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	binSearch "github.com/SZLforGithub/Algorithm/binarysearch"
+	graph "github.com/SZLforGithub/Algorithm/graph"
 	hashTable "github.com/SZLforGithub/Algorithm/hashtable"
 	quickSort "github.com/SZLforGithub/Algorithm/quicksort"
 	recursion "github.com/SZLforGithub/Algorithm/recursion"
@@ -11,7 +12,7 @@ import (
 )
 
 func main() {
-	showVoteCheck()
+	showBreadthFirstSearch()
 }
 
 func showBinSearch() {
@@ -58,4 +59,18 @@ func showVoteCheck() {
 	hashTable.Checkvote("Louis")
 	hashTable.Checkvote("Jesslyn")
 	hashTable.Checkvote("Louis")
+}
+
+func showBreadthFirstSearch() {
+	myGraph := make(map[string][]string)
+	myGraph["you"] = []string{"alice", "bob", "claire"}
+	myGraph["bob"] = []string{"anuj", "peggy"}
+	myGraph["alice"] = []string{"peggy"}
+	myGraph["claire"] = []string{"thom", "jonny"}
+	myGraph["anuj"] = []string{}
+	myGraph["peggy"] = []string{}
+	myGraph["thom"] = []string{}
+	myGraph["jonny"] = []string{}
+
+	graph.Bfs(myGraph, "you")
 }
